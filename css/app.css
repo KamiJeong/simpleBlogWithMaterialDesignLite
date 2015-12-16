@@ -1,0 +1,37 @@
+a {
+    text-decoration: none;
+}
+
+.kami-content-header {
+    height: 500px;
+    background: url("../img/headImageOfIndex.jpg") center / cover;
+}
+
+.kami-newest-content {
+    height: 500px;
+}
+
+.kami-content-list {
+    /*width: 90%;*/
+}
+
+.kami-blog {
+    width: 80%;
+}
+
+.kami-blog-header {
+    padding: 2%;
+    margin: 0;
+}
+
+.kami-blog-content {
+    padding: 1%;
+}
+
+.kami-form-body {
+    padding: 3%;
+}
+
+.kami-form {
+    width: 70%;
+}

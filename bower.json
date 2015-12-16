@@ -1,0 +1,29 @@
+{
+  "name": "Kami'sBlog",
+  "homepage": "https://github.com/KamiJeong/simpleBlogWithMaterialDesignLite",
+  "authors": [
+    "KamiJeong <kamijeong@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "mdl",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.0.6",
+    "angular": "angularjs#~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "moment": "~2.10.6"
+  }
+}

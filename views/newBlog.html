@@ -1,0 +1,34 @@
+<div class="kami-form mdl-grid">
+    <form class="mdl-cell mdl-cell--12-col" ng-submit="postNewBlog($event, newBlog)">
+        <div class="kami-form-body mdl-color--white mdl-shadow--2dp">
+            <h4 class="mdl-typography--title">Enter Title</h4>
+
+            <div class="mdl-grid">
+                <div class="mdl-cell--12-col mdl-textfield mdl-js-textfield">
+                    <input type="text" class="mdl-textfield__input" id="blogTitle" name="newBlog.title"
+                           ng-model="newBlog.title">
+                    <label class="mdl-textfield__label mdl-color-text--orange" for="blogTitle">Title...</label>
+                </div>
+            </div>
+            <h4 class="mdl-typography--title">Enter Content</h4>
+
+            <div class="mdl-grid">
+                <div class="mdl-cell--12-col mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" id="blogContent" rows="10" name="newBlog.content"
+                              ng-model="newBlog.content"></textarea>
+                    <label class="mdl-textfield__label mdl-color-text--orange" for="blogContent"
+                           name="newBlog.content">Content...</label>
+                </div>
+            </div>
+            <button type="reset"
+                    class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent">
+                Reset
+            </button>
+            <button class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--colored"
+                    ng-disabled="newBlog.title==null || newBlog.content==null">
+                Submit
+            </button>
+        </div>
+
+    </form>
+</div>

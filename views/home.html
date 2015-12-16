@@ -1,0 +1,74 @@
+<!--  Content Header -->
+<div class="kami-content-header mdl-shadow--2dp">
+</div>
+<!-- Content List -->
+<!-- Most Recent -->
+<div class="kami-content-list mdl-grid">
+    <!-- Newist Content -->
+    <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--middle">
+        <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--deep-orange">
+            <h3 class="mdl-card__title-text">
+                <a ng-href="#/blog/{{newistContent.no}}" class="mdl-color-text--white">{{newistContent.title}}</a>
+            </h3>
+        </div>
+        <div class="mdl-card--expand mdl-card__supporting-text">
+            <p>
+                {{newistContent.content | limitTo:200}}...
+            </p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border mdl-color-text--grey-600">
+            <!--  Logo  -->
+            <div class="mdl-logo"></div>
+            <div>
+                <div>
+                    <strong>The Newist</strong>
+                </div>
+                <div>
+                    <span>{{newistContent.daysAgo}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- For Desktop & Tablet Size -->
+    <div class="mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone mdl-cell--middle"
+         ng-repeat="content in oldContents | orderBy:date:true">
+        <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--blue-grey-800">
+            <h3 class="mdl-card__title-text">
+                <a ng-href="#/blog/{{content.no}}" class="mdl-color-text--white">{{content.title}}</a>
+            </h3>
+        </div>
+        <div class="mdl-card--expand mdl-card__supporting-text">
+            <p>
+                {{content.content | limitTo: 70}}
+            </p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border mdl-color-text--grey-600">
+            <!--  Logo  -->
+            <div class="mdl-logo"></div>
+            <div>
+                <div>
+                    <span>{{content.daysAgo}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- For Phone Size-->
+    <div class="mdl-cell mdl-cell--hide-desktop mdl-cell--hide-tablet mdl-cell--12-col-phone"
+         ng-repeat="content in oldContents | orderBy:date:true">
+        <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--blue-grey-800">
+            <h3 class="mdl-card__title-text">
+                <a ng-href="#/blog/{{content.no}}" href="" class="mdl-color-text--white">{{content.title}}</a>
+            </h3>
+
+            <div class="mdl-layout-spacer"></div>
+            <div>
+                <div>
+                    <strong>The Newist</strong>
+                </div>
+                <div>
+                    <span>{{content.daysAgo}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
